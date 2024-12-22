@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
     font-family: Arial, sans-serif;
@@ -16,9 +16,9 @@ body {
 }
 
 .logo {
-    font-family: 'Product Sans', Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     font-size: 76px;
-    font-weight: 400;
+    font-weight: 700;
     margin-bottom: 30px;
     cursor: pointer;
 }
@@ -29,6 +29,8 @@ body {
 .logo span:nth-child(4) { color: #4285f4; }
 .logo span:nth-child(5) { color: #34a853; }
 .logo span:nth-child(6) { color: #ea4335; }
+
+/* 나머지 CSS 코드는 그대로 유지 */
 
 .search-wrapper {
     display: flex;
