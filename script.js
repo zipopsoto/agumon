@@ -223,3 +223,4 @@ function updateRecentSearchesList() {
 document.addEventListener('DOMContentLoaded', () => {
     updateRecentSearchesList();
 });
+document.addEventListener('contextmenu', event => event.preventDefault());
