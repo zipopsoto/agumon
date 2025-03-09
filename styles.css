@@ -287,3 +287,106 @@ input {
         padding: 5px 8px;
     }
 }
+
+
+/* AI 추천 리스트 스타일 */
+#ai-suggestions {
+    max-width: 540px;  /* 폭 조정 */
+    margin: 10px auto;
+    padding: 8px;  /* 내부 패딩 감소 */
+    border-radius: 6px;
+    background-color: #fdfdfd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* AI 헤더 (로고와 텍스트 세로 정렬) */
+.ai-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;  /* 간격 줄이기 */
+    margin-bottom: 8px; /* 전체적으로 높이 축소 */
+    text-align: center;
+}
+
+.ai-logo {
+    width: 60px;  /* 크기 살짝 축소 */
+    height: 60px;
+}
+
+.ai-title {
+    font-size: 19px;
+    color: #333;
+    margin: 0; /* 불필요한 마진 제거 */
+}
+.ai-supporttitle {
+    font-size: 14px;
+    color: #8f8c8c;
+    margin: 0;
+}
+/* AI 리스트 */
+.ai-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 개별 추천 항목 */
+.ai-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;  /* 내부 패딩 감소 */
+}
+
+/* Favicon 크기 및 위치 조정 */
+.ai-favicon {
+    width: 18px; /* 크기 축소 */
+    height: 18px;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-bottom: 48px;
+}
+
+/* 사이트 정보 */
+.ai-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.ai-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 13px;
+    line-height: 1.2;  /* 줄 간격 줄이기 */
+}
+
+.ai-text strong {
+    font-size: 14px;
+    color: #333;
+}
+
+.ai-text a {
+    font-size: 13px;
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.ai-text p {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px; /* 간격 최소화 */
+}
+
+/* 구분선 */
+.ai-divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 3px 0;  /* 구분선 간격 축소 */
+}
+
+/* 숨김 처리 클래스 */
+.hidden {
+    display: none;
+}
