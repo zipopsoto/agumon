@@ -224,3 +224,18 @@ document.addEventListener('DOMContentLoaded', () => {
     updateRecentSearchesList();
 });
 document.addEventListener('contextmenu', event => event.preventDefault());
+function handleAISuggestions() {
+    const aiGenerating = document.getElementById('ai-generating');
+    const aiSuggestions = document.getElementById('ai-suggestions');
+
+    // AI Generating 표시
+    aiGenerating.classList.remove('hidden');
+
+    setTimeout(() => {
+        aiGenerating.classList.add('hidden');  // 4초 후 "AI Generating..." 제거
+        aiSuggestions.classList.remove('hidden');  // 사이트 리스트 표시
+    }, 4000);
+}
+
+// 페이지 로드 후 AI 추천 리스트 표시
+document.addEventListener('DOMContentLoaded', handleAISuggestions);
