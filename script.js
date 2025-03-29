@@ -223,7 +223,7 @@ function updateRecentSearchesList() {
 document.addEventListener('DOMContentLoaded', () => {
     updateRecentSearchesList();
 });
-document.addEventListener('contextmenu', event => event.preventDefault());
+
 function handleAISuggestions() {
     const aiGenerating = document.getElementById('ai-generating');
     const aiSuggestions = document.getElementById('ai-suggestions');
@@ -239,3 +239,26 @@ function handleAISuggestions() {
 
 // 페이지 로드 후 AI 추천 리스트 표시
 document.addEventListener('DOMContentLoaded', handleAISuggestions);
+
+// --- F12 & 개발자 도구 방지 코드 시작 ---
+document.addEventListener('keydown', function (e) {
+    if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+        (e.ctrlKey && e.key === 'U')
+    ) {
+        alert('개발자 도구 열지 마세요 😠');
+        e.preventDefault();
+    }
+});
+
+setInterval(function () {
+    const before = new Date();
+    debugger;
+    const after = new Date();
+    if (after - before > 100) {
+        alert('개발자 도구 감지됨. 사이트가 차단됩니다.');
+        window.location.href = 'about:blank';
+    }
+}, 1000);
+// --- F12 & 개발자 도구 방지 코드 끝 ---
