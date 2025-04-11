@@ -88,7 +88,7 @@ function handleSubmit(input, errorMsg) {
 }
 
 function isValidAgodaLink(link) {
-    return link.includes('agoda.com') && link.includes('cid=');
+    return link.includes('agoda.com') && link.includes('/hotel/');
 }
 
 function showError(errorMsg) {
@@ -135,13 +135,20 @@ function createCategoryDiv(category, cidList, originalLink) {
     cidList.forEach(cid => {
         const newLink = cid.link
         ? cid.link
-        : (
-            originalLink.includes('cid=')
-                ? originalLink.replace(/cid=-?\d+/, `cid=${cid.id}`)
-                : originalLink.includes('?')
-                    ? `${originalLink}&cid=${cid.id}`
-                    : `${originalLink}?cid=${cid.id}`
-        );
+        : (() => {
+            let url = originalLink;
+    
+            // cid가 있는데 값이 없거나 이상하면 제거
+            url = url.replace(/([?&])cid=[^&]*/i, '$1');
+    
+            // 마지막 & 또는 ? 남으면 정리
+            url = url.replace(/[&?]$/, '');
+    
+            // ?가 이미 있으면 &cid 추가, 아니면 ?cid 추가
+            url += (url.includes('?') ? '&' : '?') + `cid=${cid.id}`;
+    
+            return url;
+        })();
         const resultItem = document.createElement('div');
         resultItem.className = 'result-item';
         resultItem.innerHTML = `
