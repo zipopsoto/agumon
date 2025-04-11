@@ -25,6 +25,9 @@ const cids = {
         { id: '1895693&tag=A100692912', name: '현대카드' },
         { id: '1563295', name: '국민카드' },
         { id: '1937712&tag=A100692912', name: '유니온페이' },
+        /*
+        { link: 'https://www.abc.com/', name: '직링크 이름' },
+        */
         { id: '1654104', name: '우리카드' },
         { id: '1932810', name: '우리(마스터)' },
         { id: '1748498', name: 'BC카드' },
@@ -45,7 +48,9 @@ const cids = {
 
 const affiliateDiscounts = [
     { name: '국민', url: 'https://www.agoda.com/ko-kr/kbcard' },
+    { name: '현대', url: 'https://www.agoda.com/ko-kr/hyundaipromo?cid=1895693&tag=A100692912' },
     { name: '우리', url: 'https://www.agoda.com/ko-kr/wooricard' },
+    { name: '유니온페이', url: 'https://www.agoda.com/ko-kr/upikrpromo?cid=1937712&tag=A100692912' },
     { name: '우리(마스터)', url: 'https://www.agoda.com/ko-kr/wooricardmaster' },
     { name: '비씨', url: 'https://www.agoda.com/ko-kr/bccard' },
     { name: '신한', url: 'https://www.agoda.com/ko-kr/shinhancard' },
@@ -128,7 +133,15 @@ function createCategoryDiv(category, cidList, originalLink) {
     categoryDiv.appendChild(categoryTitle);
     
     cidList.forEach(cid => {
-        const newLink = originalLink.replace(/cid=\d+/, `cid=${cid.id}`);
+        const newLink = cid.link
+        ? cid.link
+        : (
+            originalLink.includes('cid=')
+                ? originalLink.replace(/cid=-?\d+/, `cid=${cid.id}`)
+                : originalLink.includes('?')
+                    ? `${originalLink}&cid=${cid.id}`
+                    : `${originalLink}?cid=${cid.id}`
+        );
         const resultItem = document.createElement('div');
         resultItem.className = 'result-item';
         resultItem.innerHTML = `
