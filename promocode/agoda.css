@@ -157,7 +157,7 @@ section h2 {
 }
 .logo {
     font-family: 'Roboto', Arial, sans-serif;
-    font-size: 76px;
+    font-size:  clamp(28px, 10vw, 76px);
     font-weight: 700;
     margin-bottom: 30px;
     cursor: pointer;
