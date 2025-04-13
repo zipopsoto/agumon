@@ -1,0 +1,242 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f8fa;
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  padding: 24px 12px 8px;
+  background-color: #fff;
+}
+
+.logo {
+  max-height: 48px;
+  margin-bottom: 6px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #111;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+section h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: -0.3px;
+  margin: 40px 0 16px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.usage-guide ul {
+  margin: 10px 0 20px;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #666;
+}
+
+.discount-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.discount-card.expired {
+  opacity: 0.5;
+}
+
+.discount-card.expired input {
+  text-decoration: line-through;
+  background: #f4f4f4;
+  color: #999;
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+.discount-card.expired .copy-btn {
+  background-color: #ccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.discount-card h3 {
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 9px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.badge.expires { background-color: #2196f3; color: #fff; }
+.badge.status.available { background-color: #4caf50; color: #fff; }
+.badge.status.unavailable { background-color: #f44336; color: #fff; }
+
+.code-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.code-row input {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fefefe;
+  height: 44px;
+  box-sizing: border-box;
+}
+
+.code-row input:focus {
+  border-color: #2196f3;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(33,150,243,0.2);
+}
+
+.copy-btn {
+  background-color: #ff7043;
+  color: #fff;
+  border: none;
+  padding: 0 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.copy-btn:hover {
+  background-color: #ff5722;
+}
+
+.notes {
+  font-size: 13px;
+  color: #777;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.notes li {
+  margin-bottom: 4px;
+}
+.logo {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 76px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logo span:nth-child(1) { color: #4285f4; }
+.logo span:nth-child(2) { color: #ea4335; }
+.logo span:nth-child(3) { color: #fbbc05; }
+.logo span:nth-child(4) { color: #4285f4; }
+.logo span:nth-child(5) { color: #34a853; }
+.logo span:nth-child(6) { color: #ea4335; }
+
+
+.usage-guide {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 32px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.usage-guide h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.usage-guide ol {
+  counter-reset: guide-counter;
+  padding-left: 0;
+  list-style: none;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.usage-guide li {
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 18px;
+}
+
+.usage-guide li::before {
+  content: counter(guide-counter);
+  counter-increment: guide-counter;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #2196f3;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.usage-guide strong {
+  color: #111;
+}
+
+.red-bold {
+  margin-top: 6px;
+  color: red;
+  font-weight: bold;
+}
+
+.guide-image {
+  width: 100%;
+  max-width: 720px;
+  display: block;
+  margin: 40px auto 24px;
+  border-radius: 4px;         
+  border: 1px solid #ddd;      
+}
