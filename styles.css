@@ -173,6 +173,59 @@ input {
     filter: blur(0.5px); /* 💫 살짝 블러 처리로 은은함 */
 }
 
+/* 여기서부터 skyscanner button */
+.playstore-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 1);
+  margin-top : 10px;
+  padding: 0 16px;
+  height: 36px;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  outline: 0;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.playstore-button:hover {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 1);
+  border: 1px solid #000;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.texts {
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.text-1 {
+  margin-bottom: 2px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.text-2 {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* 여기까지 skyscanner button */
 
 @keyframes rainbowBorder {
     0% {
