@@ -32,7 +32,7 @@ const cids = {
     { id: '1760133', name: 'Shinhan Card' },
     { id: '1917334', name: 'Toss Bank' },
     { id: '1729471', name: 'Hana Card' },
-    { id: '1845094&tag=A100692912', name: 'Kakao Pay' },
+    { id: '1942636&tag=A100692912', name: 'Kakao Pay' },
     { id: '1889572', name: 'MasterCard' },
     { id: '1889319', name: 'Visa' }
   ],
@@ -54,7 +54,7 @@ const affiliateDiscounts = [
   { name: 'Shinhan (Master)', url: 'https://www.agoda.com/ko-kr/shinhanmaster' },
   { name: 'Toss', url: 'https://www.agoda.com/ko-kr/tossbank' },
   { name: 'Hana', url: 'https://www.agoda.com/ko-kr/hanacard' },
-  { name: 'KakaoPay', url: 'https://www.agoda.com/ko-kr/kakaopaypromo?cid=1845094&tag=A100692912' },
+  { name: 'KakaoPay', url: 'https://www.agoda.com/ko-kr/kakaopaypromo?cid=1942636&tag=A100692912' },
   { name: 'MasterCard', url: 'https://www.agoda.com/ko-kr/krmastercard' },
   { name: 'UnionPay', url: 'https://www.agoda.com/ko-kr/unionpayKR' },
   { name: 'Visa', url: 'https://www.agoda.com/ko-kr/visakorea' },
