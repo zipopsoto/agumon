@@ -18,8 +18,8 @@ const cids = {
         { id: '1829968', name: '구글지도3' },
         { id: '1908612', name: '구글 검색1' },
         { id: '1922868', name: '구글 검색2' },
-        { id: '1922887', name: '구글 검색3' },
-        { id: '1891504', name: '네이버 검색1' }
+        { id: '1776688', name: '구글 검색3' },
+        { id: '1729890', name: '네이버 검색1' }
     ],
     "카드사 카테고리": [
         { id: '1895693&tag=A100692912', name: '현대카드' },
@@ -28,6 +28,7 @@ const cids = {
         /*
         { link: 'https://www.abc.com/', name: '직링크 이름' },
         */
+        { id: '1942636&tag=A100692912', name: '카카오페이' },
         { id: '1654104', name: '우리카드' },
         { id: '1932810', name: '우리(마스터)' },
         { id: '1748498', name: 'BC카드' },
@@ -35,7 +36,6 @@ const cids = {
         { id: '1760133', name: '신한카드' },
         { id: '1917334', name: '토스' },
         { id: '1729471', name: '하나' },
-        { id: '1942636&tag=A100692912', name: '카카오페이' },
         { id: '1889572', name: '마스터카드' },
         { id: '1889319', name: '비자' }
     ],
@@ -47,6 +47,7 @@ const cids = {
 };
 
 const affiliateDiscounts = [
+    { name: '카카오페이', url: 'https://www.agoda.com/ko-kr/kakaopaypromo?cid=1942636&tag=A100692912' },
     { name: '국민', url: 'https://www.agoda.com/ko-kr/kbcard' },
     { name: '현대', url: 'https://www.agoda.com/ko-kr/hyundaipromo?cid=1895693&tag=A100692912' },
     { name: '우리', url: 'https://www.agoda.com/ko-kr/wooricard' },
@@ -57,7 +58,6 @@ const affiliateDiscounts = [
     { name: '신한(마스터)', url: 'https://www.agoda.com/ko-kr/shinhanmaster' },
     { name: '토스', url: 'https://www.agoda.com/ko-kr/tossbank' },
     { name: '하나', url: 'https://www.agoda.com/ko-kr/hanacard' },
-    { name: '카카오페이', url: 'https://www.agoda.com/ko-kr/kakaopaypromo?cid=1942636&tag=A100692912' },
     { name: '마스터카드', url: 'https://www.agoda.com/ko-kr/krmastercard' },
     { name: '유니온페이', url: 'https://www.agoda.com/ko-kr/unionpayKR' },
     { name: '비자', url: 'https://www.agoda.com/ko-kr/visakorea' },
