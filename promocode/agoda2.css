@@ -1,0 +1,78 @@
+/* 기본 스타일 */
+body { font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0; background-color: #f7f7f7; color: #333; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+/* 헤더 & 네비게이션 */
+.header { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.logo { font-weight: bold; font-size: 24px; color: #3b82f6; }
+.nav-menu a { margin-left: 25px; text-decoration: none; color: #555; font-weight: bold; transition: color 0.3s; }
+.nav-menu a:hover { color: #3b82f6; }
+
+/* 섹션 제목 */
+.section-title { font-size: 28px; color: #1e3a8a; border-left: 4px solid #1e3a8a; padding-left: 10px; margin-top: 40px; margin-bottom: 20px; }
+.sub-title { font-size: 22px; color: #3b82f6; margin-top: 30px; margin-bottom: 15px; }
+
+/* 표 스타일 */
+.table-container { background-color: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow-x: auto; margin-top: 20px; }
+table { width: 100%; border-collapse: collapse; min-width: 600px; }
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #ddd; }
+th { background-color: #f2f2f2; font-weight: bold; }
+.coupon-img { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; }
+
+/* 버튼 스타일 */
+.btn { padding: 12px 20px; border-radius: 8px; font-size: 16px; font-weight: bold; text-decoration: none; display: inline-block; text-align: center; transition: background-color 0.3s, transform 0.2s; }
+.btn:hover { transform: translateY(-2px); }
+.btn-copy { background-color: #3b82f6; color: #fff; border: none; cursor: pointer; }
+.btn-move { background-color: #f39c12; color: #fff; border: none; }
+.highlight-box { background-color: #e3f2fd; border-radius: 8px; padding: 20px; text-align: center; margin: 20px 0; border: 1px solid #c7e5ff; }
+
+/* 사용방법 & FAQ 스타일 */
+.how-to-step { display: flex; align-items: flex-start; margin-bottom: 40px; }
+.step-content { flex-grow: 1; margin-left: 20px; }
+.step-number { font-size: 24px; font-weight: bold; color: #1e3a8a; margin-right: 15px; }
+.how-to-text { flex-grow: 1; }
+.how-to-img { max-width: 100%; height: auto; border-radius: 8px; margin-top: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.faq-item { border-bottom: 1px solid #eee; padding: 15px 0; }
+.faq-question { font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+.faq-answer { display: none; padding-top: 10px; color: #666; }
+
+/* 메시지 박스 스타일 */
+#message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    z-index: 1000;
+    display: none;
+    text-align: center;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .header { flex-direction: column; }
+    .nav-menu a { margin: 10px 10px 0; }
+    .section-title { font-size: 24px; }
+    .sub-title { font-size: 18px; }
+    .how-to-step { flex-direction: column; text-align: center; align-items: center; }
+    .step-number { margin: 0 0 10px 0; }
+    .step-content { margin-left: 0; }
+    .gemini-input-group { flex-direction: column; }
+}
+
+.image-container {
+  /* 이미지 컨테이너의 크기를 직접 설정할 수 있습니다 */
+  /* 예시: width: 300px; */
+  /* 예시: height: auto; */
+}
+
+.image-container img {
+  /* 이미지 자체의 크기를 부모 요소에 맞게 조정합니다 */
+  width: 100%;
+  height: auto;
+  /* 이미지 아래의 공백을 제거합니다 */
+  display: block;
+}
