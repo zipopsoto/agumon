@@ -139,12 +139,18 @@ function createCategoryDiv(category, cidList, originalLink) {
     
     cidList.forEach(cid => {
         if (cid.img) {
+            const a = document.createElement('a');
+            a.href = cid.link || '#';
+            a.target = '_self';  
+
             const img = document.createElement('img');
             img.src = cid.img;
             img.alt = cid.alt || '';
             img.style.maxWidth = '100%';
             img.style.margin = '10px 0';
-            categoryDiv.appendChild(img);
+
+            a.appendChild(img);
+            categoryDiv.appendChild(a);
             return;
         }
         const newLink = cid.link
