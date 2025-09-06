@@ -19,6 +19,11 @@ const cids = {
         { id: '1908612', name: '구글 검색1' },
         { id: '1922868', name: '구글 검색2' },
         { id: '1776688', name: '구글 검색3' },
+            { 
+      img: 'promocode/images/kakaopay.png',
+      alt: '카카오페이 할인 배너',
+      link: 'https://agodascanner.com/promocode/agoda.html#kakaopay-section'
+    },
         { id: '1729890', name: '네이버 검색1' }
     ],
     "카드사 카테고리": [
