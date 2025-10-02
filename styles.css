@@ -535,3 +535,82 @@ input {
     background-color: #333;
     color: #fff;
   }
+
+
+/* skyhacker button */
+.skyhacker-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  border-radius: 20px;
+  background: radial-gradient(circle at 30% 30%, #2d00f7, transparent 40%),
+              radial-gradient(circle at 70% 40%, #ffea00, transparent 50%),
+              radial-gradient(circle at 40% 70%, #00eaff, transparent 40%),
+              radial-gradient(circle at 80% 80%, #ff00aa, transparent 50%),
+              #0a0a0a;
+  background-blend-mode: screen;
+  margin-top: 10px;
+  padding: 0 16px;
+  height: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  outline: 0;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 어두운 필터 */
+.skyhacker-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25); /* 살짝 어둡게 */
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.skyhacker-button > * {
+  position: relative;
+  z-index: 1; /* 아이콘/텍스트는 위에 */
+}
+
+.skyhacker-button:hover {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.skyhacker-button .skyhacker-icon {
+  width: 24px;
+  height: 24px;
+  fill: silver;
+}
+
+.skyhacker-button:hover .skyhacker-icon {
+  fill: #000;
+}
+
+.skyhacker-button .skyhacker-texts {
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.skyhacker-button .skyhacker-text-1 {
+  margin-bottom: 2px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.skyhacker-button .skyhacker-text-2 {
+  font-size: 12px;
+  font-weight: 600;
+}
+/* 여기까지 skyhacker button */
