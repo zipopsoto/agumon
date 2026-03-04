@@ -200,9 +200,31 @@ input {
   border: 1px solid #000;
 }
 
+.myrealtrip-button {
+  background-color: #fff;
+  color: #000;
+}
+
+.myrealtrip-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 .icon {
   width: 16px;
   height: 16px;
+}
+
+.myrealtrip-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  transition: border-radius 0.2s ease, transform 0.2s ease;
+}
+
+.myrealtrip-button:hover .myrealtrip-icon {
+  border-radius: 8px;
+  transform: scale(1.04);
 }
 
 .texts {
